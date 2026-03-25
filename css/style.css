@@ -9,25 +9,33 @@
 
 /* ── CSS Variables ── */
 :root {
-  --primary:      #1a4731;   /* hijau tua – alam Toraja */
-  --primary-mid:  #2d6a4f;
-  --primary-light:#52b788;
-  --accent:       #d4a017;   /* emas – ornamen Toraja */
+  --primary: #1a4731;
+  /* hijau tua – alam Toraja */
+  --primary-mid: #2d6a4f;
+  --primary-light: #52b788;
+  --accent: #d4a017;
+  /* emas – ornamen Toraja */
   --accent-light: #f0c94a;
-  --cream:        #fdf8f0;
-  --white:        #ffffff;
-  --dark:         #0f2419;
-  --gray:         #6c757d;
-  --light:        #f4f9f6;
-  --border:       rgba(212,160,23,.25);
-  --shadow:       0 8px 32px rgba(26,71,49,.12);
-  --shadow-lg:    0 20px 60px rgba(26,71,49,.18);
+  --cream: #fdf8f0;
+  --white: #ffffff;
+  --dark: #0f2419;
+  --gray: #6c757d;
+  --light: #f4f9f6;
+  --border: rgba(212, 160, 23, .25);
+  --shadow: 0 8px 32px rgba(26, 71, 49, .12);
+  --shadow-lg: 0 20px 60px rgba(26, 71, 49, .18);
 }
 
 /* ── Base ── */
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Nunito', sans-serif;
@@ -37,9 +45,18 @@ body {
 }
 
 /* ── Scrollbar ── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--cream); }
-::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 3px; }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 3px;
+}
 
 /* ============================================================
    NAVBAR
@@ -53,7 +70,7 @@ body {
 }
 
 .navbar-custom.scrolled {
-  box-shadow: 0 4px 24px rgba(0,0,0,.25);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, .25);
 }
 
 .navbar-brand-text {
@@ -68,14 +85,14 @@ body {
   display: block;
   font-family: 'Nunito', sans-serif;
   font-size: .68rem;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, .5);
   letter-spacing: .1em;
   text-transform: uppercase;
   font-weight: 400;
 }
 
 .navbar-custom .nav-link {
-  color: rgba(255,255,255,.75) !important;
+  color: rgba(255, 255, 255, .75) !important;
   font-size: .82rem;
   font-weight: 500;
   letter-spacing: .1em;
@@ -88,7 +105,9 @@ body {
 .navbar-custom .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0; left: 1rem; right: 1rem;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
   height: 1px;
   background: var(--accent);
   transform: scaleX(0);
@@ -108,6 +127,7 @@ body {
 .navbar-toggler {
   border-color: var(--border) !important;
 }
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(212,160,23,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
@@ -129,9 +149,9 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 65% 70% at 80% 50%, rgba(82,183,136,.07) 0%, transparent 65%),
-    repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(212,160,23,.03) 60px),
-    repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(212,160,23,.03) 60px);
+    radial-gradient(ellipse 65% 70% at 80% 50%, rgba(82, 183, 136, .07) 0%, transparent 65%),
+    repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(212, 160, 23, .03) 60px),
+    repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(212, 160, 23, .03) 60px);
   pointer-events: none;
 }
 
@@ -139,15 +159,17 @@ body {
 .hero-bg-pattern::after {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 4px;
   background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 50%, var(--primary) 100%);
 }
 
 .hero-badge {
   display: inline-block;
-  background: rgba(212,160,23,.12);
-  border: 1px solid rgba(212,160,23,.35);
+  background: rgba(212, 160, 23, .12);
+  border: 1px solid rgba(212, 160, 23, .35);
   color: var(--accent);
   font-size: .72rem;
   letter-spacing: .2em;
@@ -172,7 +194,7 @@ body {
 
 .hero-role {
   font-family: 'Lora', serif;
-  color: rgba(255,255,255,.55);
+  color: rgba(255, 255, 255, .55);
   font-size: 1.1rem;
   font-weight: 400;
   font-style: italic;
@@ -183,20 +205,22 @@ body {
   display: flex;
   align-items: center;
   gap: .6rem;
-  color: rgba(255,255,255,.6);
+  color: rgba(255, 255, 255, .6);
   font-size: .88rem;
   margin-bottom: 2.2rem;
 }
 
 .hero-school-dot {
-  width: 6px; height: 6px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--accent);
   flex-shrink: 0;
 }
 
+/*ukuran font profile hero doct*/
 .hero-desc {
-  color: rgba(255,255,255,.55);
+  color: rgba(255, 255, 255, .55);
   font-size: .95rem;
   line-height: 1.9;
   max-width: 460px;
@@ -211,18 +235,22 @@ body {
 
 .photo-frame-outer {
   position: absolute;
-  top: -18px; left: -18px;
-  right: 18px; bottom: 18px;
-  border: 1px solid rgba(212,160,23,.45);
+  top: -18px;
+  left: -18px;
+  right: 18px;
+  bottom: 18px;
+  border: 1px solid rgba(212, 160, 23, .45);
   border-radius: 8px;
   pointer-events: none;
 }
 
 .photo-frame-inner {
   position: absolute;
-  top: 18px; left: 18px;
-  right: -18px; bottom: -18px;
-  border: 1px solid rgba(212,160,23,.2);
+  top: 18px;
+  left: 18px;
+  right: -18px;
+  bottom: -18px;
+  border: 1px solid rgba(212, 160, 23, .2);
   border-radius: 8px;
   pointer-events: none;
 }
@@ -263,7 +291,7 @@ body {
 }
 
 .photo-badge .badge-label {
-  color: rgba(255,255,255,.6);
+  color: rgba(255, 255, 255, .6);
   font-size: .72rem;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -273,17 +301,19 @@ body {
 /* ── Stats strip ── */
 .stats-strip {
   background: var(--primary);
-  border-top: 1px solid rgba(212,160,23,.2);
-  border-bottom: 1px solid rgba(212,160,23,.2);
+  border-top: 1px solid rgba(212, 160, 23, .2);
+  border-bottom: 1px solid rgba(212, 160, 23, .2);
 }
 
 .stat-box {
   padding: 1.6rem 1rem;
   text-align: center;
-  border-right: 1px solid rgba(255,255,255,.08);
+  border-right: 1px solid rgba(255, 255, 255, .08);
 }
 
-.stat-box:last-child { border-right: none; }
+.stat-box:last-child {
+  border-right: none;
+}
 
 .stat-num {
   font-family: 'Lora', serif;
@@ -295,7 +325,7 @@ body {
 }
 
 .stat-label {
-  color: rgba(255,255,255,.55);
+  color: rgba(255, 255, 255, .55);
   font-size: .73rem;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -328,7 +358,9 @@ section {
   margin-bottom: 1rem;
 }
 
-.section-title.light { color: var(--white); }
+.section-title.light {
+  color: var(--white);
+}
 
 .section-divider {
   width: 48px;
@@ -372,7 +404,7 @@ section {
 .skill-chip {
   display: inline-block;
   background: var(--light);
-  border: 1px solid rgba(26,71,49,.15);
+  border: 1px solid rgba(26, 71, 49, .15);
   color: var(--primary-mid);
   font-size: .75rem;
   font-weight: 600;
@@ -394,16 +426,17 @@ section {
 .section-vm::before {
   content: '❝';
   position: absolute;
-  top: -3rem; right: 3%;
+  top: -3rem;
+  right: 3%;
   font-size: 18rem;
-  color: rgba(255,255,255,.025);
+  color: rgba(255, 255, 255, .025);
   line-height: 1;
   pointer-events: none;
 }
 
 .vm-card {
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(212,160,23,.2);
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(212, 160, 23, .2);
   border-radius: 10px;
   padding: 2.2rem;
   height: 100%;
@@ -411,14 +444,15 @@ section {
 }
 
 .vm-card:hover {
-  background: rgba(212,160,23,.07);
+  background: rgba(212, 160, 23, .07);
   border-color: var(--accent);
   transform: translateY(-5px);
 }
 
 .vm-icon-wrap {
-  width: 52px; height: 52px;
-  background: rgba(212,160,23,.12);
+  width: 52px;
+  height: 52px;
+  background: rgba(212, 160, 23, .12);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -436,7 +470,7 @@ section {
 
 .vm-card p,
 .vm-card li {
-  color: rgba(255,255,255,.6);
+  color: rgba(255, 255, 255, .6);
   font-size: .9rem;
   line-height: 1.8;
 }
@@ -471,7 +505,7 @@ section {
 
 .prestasi-card {
   background: var(--white);
-  border: 1px solid rgba(0,0,0,.06);
+  border: 1px solid rgba(0, 0, 0, .06);
   border-radius: 10px;
   padding: 1.8rem;
   height: 100%;
@@ -483,7 +517,9 @@ section {
 .prestasi-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--accent), var(--accent-light));
   transform: scaleX(0);
@@ -537,9 +573,11 @@ section {
 .timeline-wrap::before {
   content: '';
   position: absolute;
-  left: 9px; top: 6px; bottom: 0;
+  left: 9px;
+  top: 6px;
+  bottom: 0;
   width: 1px;
-  background: linear-gradient(to bottom, var(--accent), rgba(212,160,23,.1));
+  background: linear-gradient(to bottom, var(--accent), rgba(212, 160, 23, .1));
 }
 
 .tl-item {
@@ -551,7 +589,8 @@ section {
   position: absolute;
   left: -2.2rem;
   top: 4px;
-  width: 18px; height: 18px;
+  width: 18px;
+  height: 18px;
   background: var(--white);
   border: 2px solid var(--accent);
   border-radius: 50%;
@@ -602,14 +641,15 @@ section {
 
 .section-kontak::before {
   content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 55% 55% at 50% 50%, rgba(82,183,136,.05) 0%, transparent 70%);
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 55% 55% at 50% 50%, rgba(82, 183, 136, .05) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .kontak-card {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(212,160,23,.18);
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(212, 160, 23, .18);
   border-radius: 10px;
   padding: 2rem 1.6rem;
   text-align: center;
@@ -617,7 +657,7 @@ section {
 }
 
 .kontak-card:hover {
-  background: rgba(212,160,23,.07);
+  background: rgba(212, 160, 23, .07);
   border-color: var(--accent);
 }
 
@@ -628,7 +668,7 @@ section {
 }
 
 .kontak-card h5 {
-  color: rgba(255,255,255,.45);
+  color: rgba(255, 255, 255, .45);
   font-size: .7rem;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -668,7 +708,7 @@ section {
 
 .btn-outline-gold {
   background: transparent;
-  color: rgba(255,255,255,.85);
+  color: rgba(255, 255, 255, .85);
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
   font-size: .82rem;
@@ -676,7 +716,7 @@ section {
   text-transform: uppercase;
   padding: .8rem 2rem;
   border-radius: 3px;
-  border: 1px solid rgba(255,255,255,.25);
+  border: 1px solid rgba(255, 255, 255, .25);
   text-decoration: none;
   display: inline-block;
   transition: border-color .3s, color .3s;
@@ -692,14 +732,16 @@ section {
    ============================================================ */
 .footer {
   background: #060f0a;
-  border-top: 1px solid rgba(212,160,23,.15);
+  border-top: 1px solid rgba(212, 160, 23, .15);
   text-align: center;
   padding: 1.6rem 1rem;
-  color: rgba(255,255,255,.3);
+  color: rgba(255, 255, 255, .3);
   font-size: .78rem;
 }
 
-.footer span { color: var(--accent); }
+.footer span {
+  color: var(--accent);
+}
 
 /* ============================================================
    SCROLL REVEAL
@@ -719,59 +761,125 @@ section {
    ANIMATIONS
    ============================================================ */
 @keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(-40px); }
-  to   { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(40px); }
-  to   { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.anim-left  { animation: fadeInLeft  .9s ease .2s both; }
-.anim-right { animation: fadeInRight .9s ease .3s both; }
-.anim-down  { animation: slideDown   .6s ease both; }
+.anim-left {
+  animation: fadeInLeft .9s ease .2s both;
+}
+
+.anim-right {
+  animation: fadeInRight .9s ease .3s both;
+}
+
+.anim-down {
+  animation: slideDown .6s ease both;
+}
 
 /* ============================================================
    TORAJA DECORATIVE BORDER
    ============================================================ */
 .toraja-border {
   height: 6px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--primary)  0px,
-    var(--primary)  10px,
-    var(--accent)   10px,
-    var(--accent)   20px,
-    var(--primary-light) 20px,
-    var(--primary-light) 30px,
-    var(--accent)   30px,
-    var(--accent)   40px
-  );
+  background: repeating-linear-gradient(90deg,
+      var(--primary) 0px,
+      var(--primary) 10px,
+      var(--accent) 10px,
+      var(--accent) 20px,
+      var(--primary-light) 20px,
+      var(--primary-light) 30px,
+      var(--accent) 30px,
+      var(--accent) 40px);
 }
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 991.98px) {
-  .hero { padding-top: 70px; }
-  .photo-img { max-width: 260px; height: 320px; margin: 0 auto; display: block; }
-  .photo-wrapper { display: flex; justify-content: center; margin-top: 3rem; }
-  .photo-badge { left: 0; bottom: -14px; }
+  .hero {
+    padding-top: 70px;
+  }
+
+  .photo-img {
+    max-width: 260px;
+    height: 320px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .photo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .photo-badge {
+    left: 0;
+    bottom: -14px;
+  }
 }
 
 @media (max-width: 767.98px) {
-  .stat-box { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
-  .stat-box:last-child { border-bottom: none; }
-  .hero-desc { max-width: 100%; }
+  .stat-box {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+  }
+
+  .stat-box:last-child {
+    border-bottom: none;
+  }
+
+  .hero-desc {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 575.98px) {
-  section { padding: 4rem 0; }
-  .hero-name { font-size: 2.2rem; }
+  section {
+    padding: 4rem 0;
+  }
+
+  .hero-name {
+    font-size: 2.2rem;
+  }
+}
+
+/*bagian ini adalah bagina mengatur floting atau icon whatsap di sebelalah kiri melayang dimana fixed adalah possis butomm adalah tombol oke sih*/
+.floating-wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 }
